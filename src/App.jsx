@@ -4,33 +4,40 @@ import "./App.css";
 function App() {
   return (
     <>
-      <Board className="contractors" numCards={5}>
-        {{ title: "Contractors" }}
+      {/* P1 Defense */}
+      <Board numCards={4}>Defense</Board>
+
+      {/* P1 Kingdoms */}
+      <Board x="750" numCards={4}>
+        Kingdoms
       </Board>
-      <Board className="kingdom" numCards={4}>
-        {{ title: "Kingdoms" }}
+      <Board x="750" y="140" numCards={4}></Board>
+
+      {/* Center Board / Hostile Kingdoms */}
+      <Board className="board-center" x="635" y="250" numCards={5}>
+        Hostile Kingdoms
       </Board>
-      <Board className="kingdom" numCards={4}></Board>
-      <Board className="board-center" numCards={5}>
-        {{ title: "Hostile Kingdoms" }}
+
+      {/* P2 Defense */}
+      <Board y="545" numCards={4}>
+        Defense
       </Board>
-      <Board className="contractors" numCards={5}>
-        {{ title: "Contractors" }}
+
+      {/* P2 Kingdoms */}
+      <Board x="750" y="465" numCards={4}>
+        Kingdoms
       </Board>
-      <Board className="kingdom" numCards={4}>
-        {{ title: "Kingdoms" }}
-      </Board>
-      <Board className="kingdom" numCards={4}></Board>
+      <Board x="750" y="585" numCards={4}></Board>
     </>
   );
 }
 
-function Board({ className, numCards, children = { title: "" } }) {
+function Board({ className, numCards, x = "20", y = "20", children }) {
   console.log(children);
   const cards = Array.from({ length: numCards }, (x, i) => i);
   return (
-    <div className={className}>
-      <h1>{children.title}</h1>
+    <div className={`board ${className}`} style={{ margin: `${y}px ${x}px` }}>
+      <h1>{children}</h1>
       {cards.map((x, i) => (
         <Card key={i} id={i + 1} />
       ))}

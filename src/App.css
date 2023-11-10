@@ -1,5 +1,15 @@
+* {
+  margin: 0;
+  text-align: center;
+}
+body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  width: 100vw;
+  height: 100vh;
+}
 #root {
-  padding: 2rem;
+  width: 100%;
+  height: 100%;
 }
 .card {
   display: inline-block;
@@ -7,19 +17,12 @@
   width: 45px;
   height: 60px;
   margin: 10px;
-  text-align: center;
+}
+.board {
+  position: absolute;
 }
 .board-center {
-  margin: auto;
   width: 500px;
   height: 200px;
   background-color: rgb(250, 246, 215);
-  text-align: center;
-}
-.contractors {
-  position: absolute;
-  /* display: inline-block; */
-}
-.kingdom {
-  text-align: center;
 }
