@@ -1,0 +1,25 @@
+#root {
+  padding: 2rem;
+}
+.card {
+  display: inline-block;
+  border: solid black 1px;
+  width: 45px;
+  height: 60px;
+  margin: 10px;
+  text-align: center;
+}
+.board-center {
+  margin: auto;
+  width: 500px;
+  height: 200px;
+  background-color: rgb(250, 246, 215);
+  text-align: center;
+}
+.contractors {
+  position: absolute;
+  /* display: inline-block; */
+}
+.kingdom {
+  text-align: center;
+}
